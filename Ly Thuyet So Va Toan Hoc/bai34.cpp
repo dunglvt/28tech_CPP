@@ -27,7 +27,7 @@ ll gcd(int a, int b){
 }
 
 ll lcm(int a, int b){
-    return 1ll*a*b/gcd(a, b);
+    return 1ll*a/gcd(a, b) * b;
 }
 
 int main(){
@@ -44,7 +44,7 @@ int main(){
 
     if (res <= r)
     {
-        cout << res * ceil(l / res);
+        cout << (res + l - 1)/ res * res;
     } else {
         cout << -1;
     }
